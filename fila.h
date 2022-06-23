@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-typedef struct pedido{
+typedef struct pedido {
     int identificador;
     char *nome_aluno;
     //... demais dados
@@ -10,12 +10,12 @@ typedef struct pedido{
 } Pedido;
 
 
-typedef struct node{
+typedef struct node_fifo {
     Pedido *p;
     //mecanismo p/ unir nos!
-    struct node *prox;
-} Node;
-Node * inicio = NULL; Node * fim = NULL; int tam = 0;
+    struct node_fifo *prox;
+} Node_fifo;
+Node_fifo * inicio = NULL; Node_fifo *fim = NULL; int tam = 0;
 
 
 void add_fila(int identificador, char *nome_aluno, int prioridade){
@@ -24,7 +24,7 @@ void add_fila(int identificador, char *nome_aluno, int prioridade){
         p->nome_aluno = nome_aluno;
         p->prioridade = prioridade;
         
-        Node *novo = malloc(sizeof(Node));
+        Node_fifo *novo = malloc(sizeof(Node_fifo));
         novo->p = p;
         novo->prox = NULL;
     
@@ -38,7 +38,7 @@ void add_fila(int identificador, char *nome_aluno, int prioridade){
 
 
 void imprimir(){
-    Node *aux = inicio;
+    Node_fifo *aux = inicio;
     for (int i=0; i<tam; i++){
         printf("Identificador: %d\n", aux->p->identificador);
             aux = aux->prox;}}
@@ -48,12 +48,11 @@ Pedido remover_fila(){
     Pedido pedido;
         //remover!
         if (inicio != NULL){ //remover do antigo inicio da lista!
-            Node *lixo = inicio;
+            Node_fifo *lixo = inicio;
             inicio = inicio->prox;
             pedido.identificador = lixo->p->identificador;
             //...
             free(lixo); tam--;
             
             if(tam == 1){
-                fim = NULL;}}
-    return pedido;}
+                fim = NULL;}} return pedido;}
