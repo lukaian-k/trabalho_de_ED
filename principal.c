@@ -1,35 +1,39 @@
 //imports
 #include <stdio.h>
 #include <stdlib.h>
-//
-#include "abb.h"
-#include "fila.h"
+//file
+#include "fuctions_system.h"
 
 
 int main(){
-    printf("\nSISTEMA DE ENCOMENDA DE LIVRO\n");
+    int resp; printf("\nSISTEMA DE ENCOMENDA DE LIVRO\n");
     
-    int resp; do {
-        printf(" 1 - Encomendar um livro.\n");
-        printf(" 2 - Remover uma encomenda de livro.\n");
-        printf(" 3 - Remover um pedido de livro.\n");
-        printf(" 0 - Sair do sistema!\n");
-        printf("Digite a funcionalidade desejada:"); scanf("%d", &resp);
+    while (resp != 0){
+        printf(" 1 - Encomendar um livro.\n"
+               " 2 - Remover uma encomenda de livro.\n"
+               " 3 - Remover um pedido de livro.\n"
+               " 0 - Sair do sistema!\n"
+               "Digite a funcionalidade desejada: "); scanf("%d", &resp);
 
         switch (resp){
-            case 1: break;
-            case 2: break;
-            case 3: break;
+            case 1: //encomendar um livro
+                encomendar(); break;
 
-            default: break;}
+            case 2: break;
+
+            case 3: break;
+            
+            default: break;}}
+        
+    return 0;}
             
         /*if(resp == 1){
             //encomendar um livro
-             printf(" Digite o nome do aluno:\n");
-             char * nome = malloc(sizeof(char));
-             scanf(" %[^\n]s", nome);
-             //... matricula e descricao..
-             //criar um funcao para gerar id unico (:D)
+            printf(" Digite o nome do aluno:\n");
+            char * nome = malloc(sizeof(char));
+            scanf(" %[^\n]s", nome);
+            //... matricula e descricao..
+            //criar um funcao para gerar id unico (:D)
             //add_abb(id, nome, matricula, descricao);
         }else if(resp == 2){
             //remover uma encomenda de livro da ABB (id)
@@ -60,5 +64,3 @@ int main(){
                     //int retorno = verificar(cpf, senha);
                     if(retorno == 1){
                         //remover da fila de prioridade}}}*/
-                        
-    } while(resp != 0); return 0;}
