@@ -1,10 +1,13 @@
+//imports
 #include <stdio.h>
 #include <stdlib.h>
 
 
+//struct
 typedef struct abb_node {
     //Dados iniciais da encomenda de um livro
     int id; //identificador
+
     char *nome_aluno;
     int matricula;
     char *descricao;
@@ -12,6 +15,9 @@ typedef struct abb_node {
     //mecanismo p/ unir nos!
     struct abb_node *left; struct abb_node *right;
 } Abb_node; Abb_node *root = NULL;
+
+
+//fuctions
 
 
 Abb_node *buscar(int id, Abb_node *aux){
@@ -26,25 +32,12 @@ Abb_node *buscar(int id, Abb_node *aux){
     else {return NULL;}}
 
 
-void add_abb(int id, char *nome_aluno, int matricula, char *descricao){
-    Abb_node *aux = buscar(id, root);
-    
-    if (aux != NULL && aux->id == id){printf("Insercao invalida!\n");}
-
-    else {
-        Abb_node *novo = malloc(sizeof(Abb_node));
-        novo->id = id;
-        novo->nome_aluno = nome_aluno;
-        novo->matricula = matricula;
-        novo->descricao = descricao;
-        novo->left = NULL; novo->right = NULL;
-        
-        if (aux == NULL){root = novo;} //arvore esta vazia
+void add_abb(Abb_node *new, Abb_node *aux, int id){
+        if (aux == NULL){root = new;} //arvore esta vazia
 
         else {
-            if (id < aux->id){aux->left = novo;}
-            
-            else {aux->right = novo;}}}}
+            if (id < aux->id){aux->left = new;}
+            else {aux->right = new;}}}
 
 
 Abb_node *remover_abb(Abb_node *root, int id){

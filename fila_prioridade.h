@@ -1,7 +1,9 @@
+//imports
 #include <stdio.h>
 #include <stdlib.h>
 
 
+//structs
 typedef struct pedido {
     int identificador;
     char *nome_aluno;
@@ -17,6 +19,8 @@ typedef struct fifop_node {
 } Fifop_node;
 Fifop_node *fifop_start = NULL; Fifop_node *fifop_last = NULL; int fifop_tam = 0;
 
+
+//fuctions
 
 void add_fila(int identificador, char *nome_aluno, int prioridade){
         Pedido *p = malloc(sizeof(Pedido));
