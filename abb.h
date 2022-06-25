@@ -19,7 +19,6 @@ typedef struct abb_node {
 
 //fuctions
 
-
 Abb_node *buscar(int id, Abb_node *aux){
     if (aux != NULL){
         if (aux->id == id){return aux;}
@@ -45,7 +44,7 @@ Abb_node *remover_abb(Abb_node *root, int id){
 
     else {
         if (root->left, root->right == NULL){ //remove nós, caso nao tenha filhos
-            free(root); printf("Elemento removido!\n"); return NULL;}
+            free(root); printf("Elemento removido!\n\n"); return NULL;}
 
         else { //remove nós, caso tenha 1 ou 2 filhos
             if (root->left, root->right != NULL){ //com 2 filhos
@@ -68,11 +67,16 @@ Abb_node *remover_abb(Abb_node *root, int id){
 
 
 void in_ordem(Abb_node *aux){
-    if (aux->left != NULL){in_ordem(aux->left);}
+    if (aux != NULL){
+        if (aux->left != NULL){in_ordem(aux->left);}
 
-    printf("%d\n", aux->id);
-    printf("%s\n", aux->nome_aluno);
-    printf("%d\n", aux->matricula);
-    printf("%s\n", aux->descricao);
+        printf("===ENCOMENDA===");
+        printf("%d\n", aux->id);
+        printf("%s\n", aux->nome_aluno);
+        printf("%d\n", aux->matricula);
+        printf("%s\n", aux->descricao);
+        printf("===============\n\n");
+        
+        if (aux->right != NULL){in_ordem(aux->right);}}
     
-    if (aux->right != NULL){in_ordem(aux->right);}}
+    else {printf("Não foi encontrada nenhuma encomenda pendente.\n\n");}}

@@ -17,24 +17,21 @@ int main(){
 
         switch (resp){
             case 1: //encomendar um livro
+                //OBS: CRIA GERADOR ID
                 encomendar(); break;
 
-            case 2: break;
+            case 2:
+                remover_encomenda(); break;
 
-            case 3: break;
+            case 3:
+                break;
             
-            default: break;}}
+            default:
+                break;}}
         
     return 0;}
             
-        /*if(resp == 1){
-            //encomendar um livro
-            printf(" Digite o nome do aluno:\n");
-            char * nome = malloc(sizeof(char));
-            scanf(" %[^\n]s", nome);
-            //... matricula e descricao..
-            //criar um funcao para gerar id unico (:D)
-            //add_abb(id, nome, matricula, descricao);
+/*
         }else if(resp == 2){
             //remover uma encomenda de livro da ABB (id)
             //para remover eu preciso:
@@ -63,4 +60,5 @@ int main(){
                     scanf("%s", &senha);
                     //int retorno = verificar(cpf, senha);
                     if(retorno == 1){
-                        //remover da fila de prioridade}}}*/
+                        //remover da fila de prioridade}}}
+*/
