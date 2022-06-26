@@ -6,14 +6,35 @@
 #include "fila_prioridade.h"
 //#include "fila_pre_cadastrados.h"
 
+//create variables
+int add_esq_ou_dir = 0;
+
+
+//fuctions
+
+int gerador_id(){
+    if (add_esq_ou_dir == 0){
+        Abb_node *aux = buscar(0, root);
+        if (aux != NULL && aux->id >= 0){
+            add_esq_ou_dir = 1;
+            return aux->id/2;}}
+
+    else {
+        Abb_node *aux = buscar(64, root);
+        if (aux != NULL && aux->id <= 64){
+            add_esq_ou_dir = 0;
+            return 64-(64-aux->id)/2;}}
+
+    return 0;}
+
 
 void encomendar(){
-    //criar um funcao para gerar id unico (:D)
-    int id = 0;
-
-    Abb_node *aux = buscar(id, root);
+    int id = gerador_id();
+    
     Abb_node *new = malloc(sizeof(Abb_node));
-        
+    Abb_node *aux = buscar(id, root);
+    
+
     if (aux != NULL && aux->id == id){printf("Insercao invalida!\n\n");}
 
     else {

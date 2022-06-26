@@ -32,7 +32,8 @@ Abb_node *buscar(int id, Abb_node *aux){
 
 
 void add_abb(Abb_node *new, Abb_node *aux, int id){
-        if (aux == NULL){root = new;} //arvore esta vazia
+        if (aux == NULL){
+            new->id = 32; root = new;} //arvore esta vazia
 
         else {
             if (id < aux->id){aux->left = new;}
