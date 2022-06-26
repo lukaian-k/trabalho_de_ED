@@ -52,18 +52,18 @@ void encomendar(){
     else {
         new->id = id;
             
-        // printf("Digite o nome do aluno:\n");
-        // char *nome_aluno = malloc(sizeof(char)); scanf(" %[^\n]s", nome_aluno);
-        // new->nome_aluno = nome_aluno;
+        printf("Digite o nome do aluno:\n");
+        char *nome_aluno = malloc(sizeof(char)); scanf(" %[^\n]s", nome_aluno);
+        new->nome_aluno = nome_aluno;
             
         //... matricula e descricao.. Dados iniciais da encomenda de um livro
-        // printf("Digite a matricula do aluno:\n");
-        // int matricula; scanf("%d", &matricula);
-        // new->matricula = matricula;
+        printf("Digite a matricula do aluno:\n");
+        int matricula; scanf("%d", &matricula);
+        new->matricula = matricula;
 
-        // printf("Escreva a descricao do livro:\n");
-        // char *descricao = malloc(sizeof(char)); scanf(" %[^\n]s", descricao);
-        // new->descricao = descricao;
+        printf("Escreva a descricao do livro:\n");
+        char *descricao = malloc(sizeof(char)); scanf(" %[^\n]s", descricao);
+        new->descricao = descricao;
 
         new->left = NULL; new->right = NULL;
         add_abb(new, aux, id);}}

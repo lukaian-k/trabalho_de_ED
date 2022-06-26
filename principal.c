@@ -6,9 +6,11 @@
 
 
 int main(){
-    int resp; printf("\nSISTEMA DE ENCOMENDA DE LIVRO\n");
+    //create variables
+    int resp;
     
     while (resp != 0){
+        printf("\nSISTEMA DE ENCOMENDA DE LIVRO\n");
         printf(" 1 - Encomendar um livro.\n"
                " 2 - Remover uma encomenda de livro.\n"
                " 3 - Remover um pedido de livro.\n"
@@ -17,16 +19,21 @@ int main(){
 
         switch (resp){
             case 1: //encomendar um livro
-                encomendar(); mostraArvore(root, 1); break;
+                encomendar(); break;
 
             case 2:
                 remover_encomenda(); break;
 
             case 3:
                 break;
+
+            case 1815: //OPCAO ESPECIAL (Ada Lovelace - reference)
+                printf("\n\n===Exibir estrutura da ABB (Graficamente)===\n\n");
+                abb_exibir_estrutura(root, 1);
+                printf("\n============================================\n\n\n"); break;
             
             default:
-                break;}}
+                printf("\n\nSelecione uma opção valida!\n\n"); break;}}
         
     return 0;}
             
