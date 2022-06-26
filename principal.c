@@ -17,7 +17,7 @@ int main(){
 
         switch (resp){
             case 1: //encomendar um livro
-                encomendar(); in_ordem(root); break;
+                encomendar(); mostraArvore(root, 1); break;
 
             case 2:
                 remover_encomenda(); break;

@@ -67,6 +67,19 @@ Abb_node *remover_abb(Abb_node *root, int id){
                 free(root); return aux;}}}}
 
 
+void node_imprimir(int id, int espaco) { //funcao aux da: abb_exibir_estrutura
+    for (int i=0; i<espaco; i++){printf("  ");}
+    printf("(%d)\n", id);}
+//exibe a estrutura da abb de forma grafica
+void abb_exibir_estrutura(Abb_node *node, int espaco) {
+    if (node == NULL) {
+        node_imprimir(-1, espaco); return;}
+
+    abb_exibir_estrutura(node->right, espaco+1);
+    node_imprimir(node->id, espaco);
+    abb_exibir_estrutura(node->left, espaco+1);}
+
+
 void in_ordem(Abb_node *aux){
     if (aux != NULL){
         if (aux->left != NULL){in_ordem(aux->left);}
