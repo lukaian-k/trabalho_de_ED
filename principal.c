@@ -17,7 +17,6 @@ int main(){
 
         switch (resp){
             case 1: //encomendar um livro
-                //OBS: CRIA GERADOR ID
                 encomendar(); in_ordem(root); break;
 
             case 2:

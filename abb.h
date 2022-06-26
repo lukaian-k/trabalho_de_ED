@@ -71,7 +71,7 @@ void in_ordem(Abb_node *aux){
     if (aux != NULL){
         if (aux->left != NULL){in_ordem(aux->left);}
 
-        printf("===ENCOMENDA===");
+        printf("===ENCOMENDA=== ID: ");
         printf("%d\n", aux->id);
         printf("%s\n", aux->nome_aluno);
         printf("%d\n", aux->matricula);

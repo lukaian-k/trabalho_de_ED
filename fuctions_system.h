@@ -14,18 +14,22 @@ int add_esq_ou_dir = 0;
 
 int gerador_id(){
     if (add_esq_ou_dir == 0){
+        add_esq_ou_dir = 1;
         Abb_node *aux = buscar(0, root);
-        if (aux != NULL && aux->id >= 0){
-            add_esq_ou_dir = 1;
-            return aux->id/2;}}
+
+        if (aux != NULL && aux->id > 0){return aux->id/2;}
+        for (int i=3; i<32; i++){
+            aux = buscar(i, root);
+            if (aux != NULL && aux->id != i){return i;}}}
 
     else {
+        add_esq_ou_dir = 0;
         Abb_node *aux = buscar(64, root);
-        if (aux != NULL && aux->id <= 64){
-            add_esq_ou_dir = 0;
-            return 64-(64-aux->id)/2;}}
-
-    return 0;}
+        
+        if (aux != NULL && aux->id < 64){return 64-(64-aux->id)/2;}
+        for (int i=61; i>32; i--){
+            aux = buscar(i, root);
+            if (aux != NULL && aux->id != i){return i;}}}}
 
 
 void encomendar(){
