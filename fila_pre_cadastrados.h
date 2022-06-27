@@ -3,14 +3,13 @@
 #include <stdlib.h>
 
 
-typedef struct temp {
-
-} Temp;
-
-
-typedef struct temp2 {
-
-} Temp2;
+//secretarios e transportadora
+typedef struct admin {
+    char *nome;
+    char *email;
+    int cpf;
+    int cargo;
+} Admin;
 
 
 typedef struct fifopre_node {
