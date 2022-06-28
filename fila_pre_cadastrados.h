@@ -3,12 +3,13 @@
 #include <stdlib.h>
 
 
-//secretarios e transportadora
+//3 secretarios e 5 transportadora
 typedef struct admin {
     char *nome;
     char *email;
+    char *senha;
     int cpf;
-    int cargo;
+    char cargo;
 } Admin;
 
 

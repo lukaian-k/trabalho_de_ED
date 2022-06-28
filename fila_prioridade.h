@@ -35,10 +35,25 @@ void add_fila(int identificador, char *nome_aluno, int prioridade){
         if (fifop_start == NULL){ //fila vazia
             fifop_start = novo; fifop_last = novo; fifop_tam++;}
 
-        else { //adiciona de acordo com a prioridade! :D
-            //modificar!
-            fifop_last->next = novo;
-            fifop_last = novo; fifop_tam++;}}
+        //adiciona de acordo com a prioridade! :D
+        else if(fifop_start->p->prioridade < prioridade){
+            novo->next = fifop_start;
+            fifop_start = novo; fifop_tam++;}
+        
+        else {
+            if (fifop_last->p->prioridade > prioridade){
+                fifop_last->next = novo;
+                fifop_last = novo;}
+
+            else {
+                Fifop_node *aux = fifop_start;
+                while (aux->next->p->prioridade < prioridade){
+                    aux = aux->next;}
+                
+                novo->next = aux->next;
+                aux->next = novo;}
+                
+            fifop_tam++;}}
 
 
 void imprimir(){
