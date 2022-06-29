@@ -1,9 +1,8 @@
 //imports
 #include <stdio.h>
 #include <stdlib.h>
-//files
+//file
 #include "abb.h"
-#include "fila_prioridade.h"
 //#include "fila_pre_cadastrados.h"
 
 //create variables

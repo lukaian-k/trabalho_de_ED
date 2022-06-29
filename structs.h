@@ -21,8 +21,13 @@ typedef struct admin { //3 secretarios (cargo: S) e 5 transportadores (cargo: T)
 } Admin;
 
 
-typedef struct abb_node { //no da abb - encomendas
-    Pedido encomenda;
+typedef struct abb_node {
+    //Dados iniciais da encomenda de um livro
+    int id; //identificador
+
+    char *nome_aluno;
+    int matricula;
+    char *descricao;
     
     //mecanismo p/ unir nos!
     struct abb_node *left; struct abb_node *right;
@@ -30,14 +35,16 @@ typedef struct abb_node { //no da abb - encomendas
 
 
 typedef struct fifop_node { //struct para os pedidos
-    Pedido p;
+    Pedido *pedido;
+
     //mecanismo p/ unir nos!
     struct fifop_node *next;
 } Fifop_node;
 
 
 typedef struct fifopre_node { //struct para os usuarios pre-cadastrados
-    Admin a;
+    Admin *admin;
+
     //mecanismo p/ unir nos!
     struct fifopre_node *next;
 } Fifopre_node;

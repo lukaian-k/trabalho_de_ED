@@ -2,23 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-//3 secretarios (cargo: S) e 5 transportadores (cargo: T)
-typedef struct admin {
-    char *nome;
-    char *senha;
-    int cpf;
-    char cargo;
-} Admin;
-
-
-typedef struct fifopre_node {
-    Admin *a;
-    //mecanismo p/ unir nos!
-    struct fifopre_node *next;
-} Fifopre_node;
+//create variables
 Fifopre_node *fifopre_start = NULL; Fifopre_node *fifopre_last = NULL; int fifopre_tam = 0;
 
+
+//fuctions
 
 void fifopre_add(int identificador, char *nome_aluno, int prioridade){
         Pedido *p = malloc(sizeof(Pedido));

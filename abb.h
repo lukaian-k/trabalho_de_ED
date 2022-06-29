@@ -1,20 +1,11 @@
 //imports
 #include <stdio.h>
 #include <stdlib.h>
+//file
+#include "fila_prioridade.h"
 
-
-//struct
-typedef struct abb_node {
-    //Dados iniciais da encomenda de um livro
-    int id; //identificador
-
-    char *nome_aluno;
-    int matricula;
-    char *descricao;
-    
-    //mecanismo p/ unir nos!
-    struct abb_node *left; struct abb_node *right;
-} Abb_node; Abb_node *root = NULL;
+//create variables
+Abb_node *root = NULL;
 
 
 //fuctions

@@ -7,9 +7,8 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Tue Jun 28 21:15:55 2022
+# Make data base, printed on Wed Jun 29 10:54:15 2022
 
 # Variables
 
@@ -22,7 +21,7 @@ NO_AT_BRIDGE = 1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bab9bd92-8306-4d22-a2cb-d1755e7d0ee2.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1da8cd07-0a52-4110-80c2-5523bca56290.sock
 # environment
 VSCODE_CWD = /home/lukaian
 # environment
@@ -64,7 +63,7 @@ VSCODE_CODE_CACHE_PATH = /home/lukaian/.config/Code/CachedData/30d9c6cd9483b2cc5
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.247CO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.F8J5N1
 # default
 .LOADED := 
 # default
@@ -102,13 +101,13 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2930
+VSCODE_PID = 6068
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1712,unix/unix:/tmp/.ICE-unix/1712
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1693,unix/unix:/tmp/.ICE-unix/1693
 # automatic
 *F = $(notdir $*)
 # environment
@@ -146,7 +145,7 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = 920f7e3a245f4b149af9e150ae258eb9
+INVOCATION_ID = 7cd236e1d3c74aab861a85e213a3862c
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -176,7 +175,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 1747
+SYSTEMD_EXEC_PID = 1751
 # environment
 HISTCONTROL = ignoredups
 # environment
@@ -188,20 +187,19 @@ USER = lukaian
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1569
+MANAGERPID = 1562
 # environment
 which_declare = declare -f
 # environment
- 
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2930
+GIO_LAUNCHED_DESKTOP_FILE_PID = 6068
 # environment
 _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-JOURNAL_STREAM = 8:28577
+JOURNAL_STREAM = 8:27605
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -235,9 +233,10 @@ GDMSESSION = gnome
 
 # Directories
 
-# . (device 35, inode 2172841): 11 files, no impossibilities.
+# . (device 35, inode 2172841): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+ 
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -287,12 +286,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 200 B / avg = 10 B
-# current buf: size = 8162 B / used = 200 B / count = 19 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 210 B / avg = 10 B
+# current buf: size = 8162 B / used = 210 B / count = 20 / avg = 10 B
 
-# strcache performance: lookups = 22 / hit rate = 13%
+# strcache performance: lookups = 23 / hit rate = 13%
 # hash-table stats:
-# Load=19/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Tue Jun 28 21:15:55 2022
+# Load=20/8192=0%, Rehash=0, Collisions=0/23=0%
+# Finished Make data base on Wed Jun 29 10:54:15 2022
 
  
