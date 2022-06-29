@@ -3,10 +3,9 @@
 #include <stdlib.h>
 
 
-//3 secretarios e 5 transportadora
+//3 secretarios (cargo: S) e 5 transportadores (cargo: T)
 typedef struct admin {
     char *nome;
-    char *email;
     char *senha;
     int cpf;
     char cargo;
@@ -14,7 +13,7 @@ typedef struct admin {
 
 
 typedef struct fifopre_node {
-
+    Admin *a;
     //mecanismo p/ unir nos!
     struct fifopre_node *next;
 } Fifopre_node;

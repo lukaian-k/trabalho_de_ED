@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "fuctions_system.h": "c",
+        "stdio.h": "c"
+    }
+}

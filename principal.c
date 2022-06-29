@@ -11,10 +11,9 @@ int main(){
     
     while (resp != 0){
         printf("\n===SISTEMA DE ENCOMENDA DE LIVRO===\n\n");
-        printf(" 1 - Encomendar um livro.\n" //sem senha
-               " 2 - Remover uma encomenda de livro.\n" //secretario
-               " 3 - Adicionar um pedido de livro.\n" //secretario
-               " 4 - Remover um pedido de livro.\n" //transportadora
+        printf(" 1 - Encomendar um livro.\n" //sem pedir senha
+               " 2 - Remover uma encomenda de livro.\n" //secretario - pedir senha
+               " 3 - Remover um pedido de livro.\n" //transportadores - pedir senha
                " 0 - Sair do sistema!\n"
                "Digite a funcionalidade desejada: "); scanf("%d", &resp);
 
@@ -27,9 +26,6 @@ int main(){
                 remover_encomenda(); break;
 
             case 3:
-                break;
-
-            case 4:
                 break;
 
             case 1815: //OPCAO ESPECIAL (Ada Lovelace - reference)

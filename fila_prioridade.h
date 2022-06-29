@@ -5,10 +5,17 @@
 
 //structs
 typedef struct pedido {
-    int identificador;
+    int identificador; //id
+    int prioridade; //de 0 à 100
+
+    //informações ja existentes
     char *nome_aluno;
-    //... demais dados
-    int prioridade;
+    int matricula;
+    char *descricao;
+    //novas informações
+    char *nome_responsavel;
+    char *nome_campus_aluno;
+    char *nome_campus_livro;
 } Pedido;
 
 
@@ -22,11 +29,16 @@ Fifop_node *fifop_start = NULL; Fifop_node *fifop_last = NULL; int fifop_tam = 0
 
 //fuctions
 
-void add_fila(int identificador, char *nome_aluno, int prioridade){
+void add_fila(int identificador, int prioridade, char *nome_aluno, int matricula, char *descricao, char *nome_responsavel, char *nome_campus_aluno, char *nome_campus_livro){
         Pedido *p = malloc(sizeof(Pedido));
         p->identificador = identificador;
-        p->nome_aluno = nome_aluno;
         p->prioridade = prioridade;
+        p->nome_aluno = nome_aluno;
+        p->matricula = matricula;
+        p->descricao = descricao;
+        p->nome_responsavel = nome_responsavel;
+        p->nome_campus_aluno = nome_campus_aluno;
+        p->nome_campus_livro = nome_campus_livro;
         
         Fifop_node *novo = malloc(sizeof(Fifop_node));
         novo->p = p;
