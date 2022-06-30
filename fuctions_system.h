@@ -88,17 +88,28 @@ void remover_encomenda(){
     
     int retorno = verificar_senha();
     if (retorno == 1){
-        int selecionar_id;
-        printf(" Digite o id da encomenda que deseja remover:\n"); scanf("%s", &selecionar_id);
-        root = remover_abb(root, selecionar_id);
+        //create variables
+        int selecionar_id; Abb_node *lixo = buscar(selecionar_id, root);
+        
+        printf(" Digite o id da encomenda que deseja remover:\n"); scanf("%d", &selecionar_id);
 
-        //setar novos dados (faltando)
-        char *nome_responsavel; char *nome_campus_aluno; char *nome_campus_livro;
-        printf(" Digite o nome do responsavel:\n"); scanf(" %[^\n]s", nome_responsavel);
-        printf(" Digite o nome do campus do aluno:\n"); scanf(" %[^\n]s", nome_campus_aluno);
-        printf(" Digite o nome do campus do livro:\n"); scanf(" %[^\n]s", nome_campus_livro);
-        //5 - add_fila(....);
-    }}
+        if (lixo != NULL){
+            root = remover_abb(root, selecionar_id);
+
+            //setar novos dados (faltando)
+            printf("Digite o nome do responsavel:\n");
+            char *nome_responsavel = malloc(sizeof(char)); scanf(" %[^\n]s", nome_responsavel);
+
+            printf("Digite o nome do campus do aluno:\n");
+            char *nome_campus_aluno = malloc(sizeof(char)); scanf(" %[^\n]s", nome_campus_aluno);
+            
+            printf("Digite o nome do campus do livro:\n");
+            char *nome_campus_livro = malloc(sizeof(char)); scanf(" %[^\n]s", nome_campus_livro);
+
+            printf("Informe a prioridade do pedido (0 à 100):\n");
+            int prioriadade; scanf("%d", &prioriadade);
+
+            add_fila(lixo->id, prioriadade, lixo->nome_aluno, lixo->matricula, lixo->descricao, nome_responsavel, nome_campus_aluno, nome_campus_livro);}}}
 
 
 void remover_pedido(){

@@ -9,7 +9,8 @@ Fifopre_node *fifopre_start = NULL; Fifopre_node *fifopre_last = NULL; int fifop
 //fuctions
 
 void fifopre_add(int identificador, char *nome_aluno, int prioridade){
-        Pedido *p = malloc(sizeof(Pedido));
+        Admin *admin = malloc(sizeof(Admin));
+        
         p->identificador = identificador;
         p->nome_aluno = nome_aluno;
         p->prioridade = prioridade;

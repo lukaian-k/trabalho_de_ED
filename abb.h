@@ -32,30 +32,37 @@ void add_abb(Abb_node *new, Abb_node *aux, int id){
 
 
 Abb_node *remover_abb(Abb_node *root, int id){
-    if (root == NULL){return NULL;}
+    if (root == NULL){
+        printf("Valor nao encontrado!\n"); return NULL;}
 
-    else {
-        if (root->left, root->right == NULL){ //remove nós, caso nao tenha filhos
-            free(root); printf("Elemento removido!\n\n"); return NULL;}
+    else { //procura o nó a remover
+        if (root->id == id){ //remove nós, caso nao tenha filhos
+            if (root->left == NULL && root->right == NULL){
+                free(root); return NULL;}
 
-        else { //remove nós, caso tenha 1 ou 2 filhos
-            if (root->left, root->right != NULL){ //com 2 filhos
-                Abb_node *aux = root->left;
-                while (aux->right != NULL){
-                    aux = aux->right;}
+            else { //remove nós, caso tenha 1 ou 2 filhos
+                if (root->left != NULL && root->right != NULL){ //com 2 filhos
+                    Abb_node *aux = root->left;
 
-                root->id = aux->id;
-                aux->id = id;
+                    while (aux->right != NULL){
+                        aux = aux->right;}
 
-                root->left = remover_abb(root->left, id); return root;}
+                    root->id = aux->id;
+                    aux->id = id;
 
-            else { //com 1 filho
-                Abb_node *aux;
+                    root->left = remover_abb(root->left, id);
+                    return root;}
 
-                if (root->left != NULL){aux = root->left;}
-                else {aux = root->right;}
+                else { //com 1 filho
+                    Abb_node *aux;
+                    if (root->left != NULL){aux = root->left;}
+                    else {aux = root->right;}
 
-                free(root); return aux;}}}}
+                    free(root); return aux;}}}
+
+        else {
+            if (id < root->id){root->left = remover_abb(root->left, id);}
+            else {root->right = remover_abb(root->right, id);} return root;}}}
 
 
 void in_ordem(Abb_node *aux){
