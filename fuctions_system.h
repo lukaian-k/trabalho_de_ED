@@ -58,7 +58,6 @@ void encomendar(){
     Abb_node *new = malloc(sizeof(Abb_node));
     Abb_node *aux = buscar(id, root);
     
-
     if (aux != NULL && aux->id == id){printf("Insercao invalida!\n\n");}
 
     else {
@@ -81,13 +80,12 @@ void encomendar(){
         add_abb(new, aux, id);}}
 
 
+//remover uma encomenda de livro da ABB (id)
 void remover_encomenda(){
-    //remover uma encomenda de livro da ABB (id)
     //visualizar as encomendas
     in_ordem(root);
     
-    int retorno = verificar_senha();
-    if (retorno == 1){
+    if (verificar_senha() == 1){
         //create variables
         int selecionar_id; Abb_node *lixo = buscar(selecionar_id, root);
         
@@ -109,9 +107,14 @@ void remover_encomenda(){
             printf("Informe a prioridade do pedido (0 à 100):\n");
             int prioriadade; scanf("%d", &prioriadade);
 
-            add_fila(lixo->id, prioriadade, lixo->nome_aluno, lixo->matricula, lixo->descricao, nome_responsavel, nome_campus_aluno, nome_campus_livro);}}}
+            add_fila(lixo->id, prioriadade, lixo->nome_aluno, lixo->matricula, lixo->descricao, nome_responsavel, nome_campus_aluno, nome_campus_livro);}}
+    
+    else {
+        printf("\nSenha incorreta!\n\n");}}
 
 
 void remover_pedido(){
-    
-}
+    //2 - verificar o usuario
+    if (verificar_senha() == 1){
+        //remover da fila de prioridade
+        remover_fila();}}

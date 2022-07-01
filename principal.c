@@ -37,18 +37,3 @@ int main(){
                 printf("\n\nSelecione uma opção valida!\n\n"); break;}}
         
     return 0;}
-            
-/*
-            }else if(resp == 3){
-               
-                //2 - verificar o usuario
-                    printf(" Digite seu cpf:\n");
-                    char cpf[100];
-                    scanf("%s", &cpf);
-                    printf(" Digite sua senha:\n");
-                    char senha[100];
-                    scanf("%s", &senha);
-                    //int retorno = verificar(cpf, senha);
-                    if(retorno == 1){
-                        //remover da fila de prioridade}}}
-*/
