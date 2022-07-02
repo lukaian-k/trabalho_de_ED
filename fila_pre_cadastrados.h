@@ -40,7 +40,7 @@ void add_pre_cadastrados(){
     fifopre_add("Brenda Vieira", "100", 100, 'S');
     fifopre_add("Pietro Correia", "200", 200, 'S');
     fifopre_add("Noah da Costa", "300", 300, 'S');
-    //transportadores
+    ////transportadores
     fifopre_add("Davi Lucca Nunes", "111", 111, 'T');
     fifopre_add("André Martins", "112", 112, 'T');
     fifopre_add("Agatha da Paz", "113", 113, 'T');

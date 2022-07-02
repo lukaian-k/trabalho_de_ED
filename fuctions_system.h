@@ -11,7 +11,7 @@ int add_esq_ou_dir = 0;
 
 //fuctions
 
-int verificar_senha(Fifopre_node *aux, char cargo){
+Fifopre_node *verificar_senha(Fifopre_node *aux, char cargo){
     int cpf; char senha[100];
 
     printf("\nDigite seu cpf: "); scanf("%d", &cpf);
@@ -21,9 +21,9 @@ int verificar_senha(Fifopre_node *aux, char cargo){
             printf("\nDigite sua senha: "); scanf(" %[^\n]s", &senha);
 
             if (strcasecmp(senha, aux->admin.senha) == 0){
-                printf("\nSenha correta!\n\n"); return 1;}
+                printf("\nSenha correta!\n\n"); return aux;}
 
-            else {printf("\nSenha incorreta!\n\n"); return 0;}}
+            else {printf("\nSenha incorreta!\n\n"); return NULL;}}
         aux = aux->next;}
 
     printf("\nNão há nenhum usuario cadastrado com esse CPF que possa usar essa função."); return 0;}
@@ -89,8 +89,9 @@ void encomendar(){
 void remover_encomenda(){
     //visualizar as encomendas
     in_ordem(root);
-    
-    if (verificar_senha(fifopre_start, 'S') == 1){
+    Fifopre_node *admin = verificar_senha(fifopre_start, 'S');
+
+    if (admin != NULL){
         //create variables
         int selecionar_id; Abb_node *lixo = buscar(selecionar_id, root);
         
@@ -100,9 +101,6 @@ void remover_encomenda(){
             root = remover_abb(root, selecionar_id);
 
             //setar novos dados (faltando)
-            printf("Digite o nome do responsavel:\n");
-            char *nome_responsavel = malloc(sizeof(char)); scanf(" %[^\n]s", nome_responsavel);
-
             printf("Digite o nome do campus do aluno:\n");
             char *nome_campus_aluno = malloc(sizeof(char)); scanf(" %[^\n]s", nome_campus_aluno);
             
@@ -111,8 +109,8 @@ void remover_encomenda(){
 
             printf("Informe a prioridade do pedido (0 à 100):\n");
             int prioriadade; scanf("%d", &prioriadade);
-
-            add_fila(lixo->id, prioriadade, lixo->nome_aluno, lixo->matricula, lixo->descricao, nome_responsavel, nome_campus_aluno, nome_campus_livro);}}
+            
+            add_fila(lixo->id, prioriadade, lixo->nome_aluno, lixo->matricula, lixo->descricao, admin->admin.nome, nome_campus_aluno, nome_campus_livro);}}
     
     else {
         printf("\nSenha incorreta!\n\n");}}
@@ -120,6 +118,6 @@ void remover_encomenda(){
 
 void remover_pedido(){
     //verificar o usuario
-    if (verificar_senha(fifopre_start, 'T') == 1){
+    if (verificar_senha(fifopre_start, 'T') != NULL){
         //remover da fila de prioridade
         remover_fila();}}
