@@ -1,6 +1,8 @@
 //imports
 #include <stdio.h>
 #include <stdlib.h>
+//file
+#include "structs.h"
 
 //create variables
 Fifopre_node *fifopre_start = NULL; Fifopre_node *fifopre_last = NULL; int fifopre_tam = 0;
@@ -8,15 +10,13 @@ Fifopre_node *fifopre_start = NULL; Fifopre_node *fifopre_last = NULL; int fifop
 
 //fuctions
 
-void fifopre_add(int identificador, char *nome_aluno, int prioridade){
-        Admin *admin = malloc(sizeof(Admin));
-        
-        p->identificador = identificador;
-        p->nome_aluno = nome_aluno;
-        p->prioridade = prioridade;
-        
+void fifopre_add(char *nome, char *senha, int cpf, char cargo){
         Fifopre_node *novo = malloc(sizeof(Fifopre_node));
-        novo->p = p;
+        novo->admin.nome = nome;
+        novo->admin.senha = senha;
+        novo->admin.cpf = cpf;
+        novo->admin.cargo = cargo;
+        
         novo->next = NULL;
     
         if (fifopre_start == NULL){ //fila vazia
@@ -31,19 +31,18 @@ void fifopre_add(int identificador, char *nome_aluno, int prioridade){
 void fifopre_imprimir(){
     Fifopre_node *aux = fifopre_start;
     for (int i=0; i<fifopre_tam; i++){
-        printf("Identificador: %d\n", aux->p->identificador);
+        printf("Nome dos cadastrados: %s - Cargo: %c\n", aux->admin.nome, aux->admin.cargo);
             aux = aux->next;}}
 
 
-Pedido fifopre_remover(){
-    Pedido pedido;
-        //remover!
-        if (fifopre_start != NULL){ //remover do antigo inicio da lista!
-            Fifopre_node *lixo = fifopre_start;
-            fifopre_start = fifopre_start->next;
-            pedido.identificador = lixo->p->identificador;
-            //...
-            free(lixo); fifopre_tam--;
-            
-            if(fifopre_tam == 1){
-                fifopre_last = NULL;}} return pedido;}
+void add_pre_cadastrados(){
+    //secretarios
+    fifopre_add("Brenda Vieira", "100", 100, 'S');
+    fifopre_add("Pietro Correia", "200", 200, 'S');
+    fifopre_add("Noah da Costa", "300", 300, 'S');
+    //transportadores
+    fifopre_add("Davi Lucca Nunes", "111", 111, 'T');
+    fifopre_add("André Martins", "112", 112, 'T');
+    fifopre_add("Agatha da Paz", "113", 113, 'T');
+    fifopre_add("Bruna Lima", "114", 114, 'T');
+    fifopre_add("Henrique Correia", "115", 115, 'T');}

@@ -1,9 +1,9 @@
 //imports
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 //file
 #include "abb.h"
-//#include "fila_pre_cadastrados.h"
 
 //create variables
 int add_esq_ou_dir = 0;
@@ -11,17 +11,22 @@ int add_esq_ou_dir = 0;
 
 //fuctions
 
-int verificar_senha(){
-    //verificar o usuario
-    char cpf[100]; char senha[100];
+int verificar_senha(Fifopre_node *aux, char cargo){
+    int cpf; char senha[100];
 
-    printf(" Digite seu cpf:\n"); scanf("%s", &cpf);
-    printf(" Digite sua senha:\n"); scanf("%s", &senha);
-    
-    //se o usuario e senha estiverem certos
-    return 1;
-    //se nao
-    return 0;}
+    printf("\nDigite seu cpf: "); scanf("%d", &cpf);
+
+    for (int i=0; i<fifopre_tam; i++){
+        if (cargo == aux->admin.cargo && cpf == aux->admin.cpf){
+            printf("\nDigite sua senha: "); scanf(" %[^\n]s", &senha);
+
+            if (strcasecmp(senha, aux->admin.senha) == 0){
+                printf("\nSenha correta!\n\n"); return 1;}
+
+            else {printf("\nSenha incorreta!\n\n"); return 0;}}
+        aux = aux->next;}
+
+    printf("\nNão há nenhum usuario cadastrado com esse CPF que possa usar essa função."); return 0;}
 
 
 int gerador_id(){
@@ -85,7 +90,7 @@ void remover_encomenda(){
     //visualizar as encomendas
     in_ordem(root);
     
-    if (verificar_senha() == 1){
+    if (verificar_senha(fifopre_start, 'S') == 1){
         //create variables
         int selecionar_id; Abb_node *lixo = buscar(selecionar_id, root);
         
@@ -114,7 +119,7 @@ void remover_encomenda(){
 
 
 void remover_pedido(){
-    //2 - verificar o usuario
-    if (verificar_senha() == 1){
+    //verificar o usuario
+    if (verificar_senha(fifopre_start, 'T') == 1){
         //remover da fila de prioridade
         remover_fila();}}

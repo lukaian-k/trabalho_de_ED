@@ -6,11 +6,14 @@
 
 
 int main(){
+    //cadastrando secretarios e transportadores
+    add_pre_cadastrados(); fifopre_imprimir();
+
     //create variables
     int resp;
     
     while (resp != 0){
-        printf("\n===SISTEMA DE ENCOMENDA DE LIVRO===\n\n");
+        printf("\n<<<SISTEMA DE ENCOMENDA DE LIVRO>>>\n\n");
         printf(" 1 - Encomendar um livro.\n" //sem pedir senha
                " 2 - Remover uma encomenda de livro.\n" //secretario - pedir senha
                " 3 - Remover um pedido de livro.\n" //transportadores - pedir senha
@@ -26,7 +29,7 @@ int main(){
                 remover_encomenda(); break;
 
             case 3:
-                break;
+                remover_pedido(); break;
 
             case 1815: //OPCAO ESPECIAL (Ada Lovelace - reference)
                 printf("\n\n===Exibir estrutura da ABB (Graficamente)===\n\n");

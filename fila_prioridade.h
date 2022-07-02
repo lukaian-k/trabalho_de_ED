@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 //file
-#include "structs.h"
+#include "fila_pre_cadastrados.h"
 
 //create variables
 Fifop_node *fifop_start = NULL; Fifop_node *fifop_last = NULL; int fifop_tam = 0;

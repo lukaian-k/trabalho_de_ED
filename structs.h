@@ -43,7 +43,7 @@ typedef struct fifop_node { //struct para os pedidos
 
 
 typedef struct fifopre_node { //struct para os usuarios pre-cadastrados
-    Admin *admin;
+    Admin admin;
 
     //mecanismo p/ unir nos!
     struct fifopre_node *next;
