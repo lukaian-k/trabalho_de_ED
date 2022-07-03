@@ -51,7 +51,15 @@ void add_fila(int id, int prioridade, char *nome_aluno, int matricula, char *des
 
 void imprimir(Fifop_node *aux){
     if (aux != NULL){
-        printf("Identificador: %d\n", aux->pedido->id);
+        printf(BOLD BACKGROUND_WHITE FONT_GREEN " Identificador: %d \n", aux->pedido->id);
+        printf(FONT_BLUE " Nome do responsavel: %s \n", aux->pedido->nome_responsavel);
+        printf(FONT_BLACK " Nome do aluno: %s \n", aux->pedido->nome_aluno);
+        printf(" Matricula do aluno: %d \n", aux->pedido->matricula);
+        printf(" Nome do campus do aluno: %s \n", aux->pedido->nome_campus_aluno);
+        printf(" Descrição do livro: %s \n", aux->pedido->descricao);
+        printf(" Campus onde o livro se encontra: %s \n", aux->pedido->nome_campus_livro);
+        printf(FONT_RED " Prioridade do pedido: %d \n" RESET, aux->pedido->prioridade);
+        printf(BOLD FONT_GREEN "-----------------------------\n" RESET);
         imprimir(aux->next);}}
 
 

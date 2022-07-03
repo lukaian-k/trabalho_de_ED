@@ -8,11 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-<<<<<<< HEAD
-# Make data base, printed on Sat Jul  2 12:30:58 2022
-=======
-# Make data base, printed on Sat Jul  2 19:11:47 2022
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+# Make data base, printed on Sun Jul  3 11:03:16 2022
 
 # Variables
 
@@ -25,11 +21,7 @@ NO_AT_BRIDGE = 1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-<<<<<<< HEAD
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-21b6637e-e4e6-470f-af21-84da88e37917.sock
-=======
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-13b267ee-3384-46aa-879e-dbe7c22cb969.sock
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-34593c4a-3714-4c53-a2f2-923c055441bd.sock
 # environment
 VSCODE_CWD = /home/lukaian
 # environment
@@ -71,11 +63,7 @@ VSCODE_CODE_CACHE_PATH = /home/lukaian/.config/Code/CachedData/30d9c6cd9483b2cc5
 # environment
 LANG = C
 # environment
-<<<<<<< HEAD
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.AIRSO1
-=======
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.7MXXO1
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.GWN5O1
 # default
 .LOADED := 
 # default
@@ -113,17 +101,13 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-<<<<<<< HEAD
-VSCODE_PID = 2819
-=======
-VSCODE_PID = 2523
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+VSCODE_PID = 2552
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1665,unix/unix:/tmp/.ICE-unix/1665
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1689,unix/unix:/tmp/.ICE-unix/1689
 # automatic
 *F = $(notdir $*)
 # environment
@@ -148,6 +132,7 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 SHLVL = 0
 # environment
 MAKELEVEL := 0
+ 
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
@@ -161,11 +146,7 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # environment
-<<<<<<< HEAD
-INVOCATION_ID = 995a6d7d7cc04bb48ca31a298c98e21c
-=======
-INVOCATION_ID = 6312d7f4c02b45049d1763b64137711e
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+INVOCATION_ID = 1ed3ac3bb3eb4716a5a6486b20da4962
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -195,11 +176,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := 
 # environment
-<<<<<<< HEAD
-SYSTEMD_EXEC_PID = 1725
-=======
-SYSTEMD_EXEC_PID = 1722
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+SYSTEMD_EXEC_PID = 1741
 # environment
 HISTCONTROL = ignoredups
 # environment
@@ -211,31 +188,19 @@ USER = lukaian
 # default
 MAKE_VERSION := 4.3
 # environment
-<<<<<<< HEAD
-MANAGERPID = 1550
-=======
-MANAGERPID = 1548
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+MANAGERPID = 1574
 # environment
 which_declare = declare -f
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-<<<<<<< HEAD
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2819
-=======
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2523
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2552
 # environment
 _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-<<<<<<< HEAD
-JOURNAL_STREAM = 8:28545
-=======
-JOURNAL_STREAM = 8:29064
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+JOURNAL_STREAM = 8:27635
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -257,10 +222,10 @@ SUFFIXES :=
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # environment
+ 
 XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = gnome
- 
 # variable set hash-table stats:
 # Load=104/1024=10%, Rehash=0, Collisions=4/131=3%
 
@@ -327,12 +292,7 @@ GNUmakefile:
 
 # strcache performance: lookups = 23 / hit rate = 13%
 # hash-table stats:
- 
 # Load=20/8192=0%, Rehash=0, Collisions=0/23=0%
-<<<<<<< HEAD
-# Finished Make data base on Sat Jul  2 12:30:58 2022
-=======
-# Finished Make data base on Sat Jul  2 19:11:47 2022
->>>>>>> 7b7cef9 (pequeno ajuste no remover encomenda)
+# Finished Make data base on Sun Jul  3 11:03:16 2022
 
  

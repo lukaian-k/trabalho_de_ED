@@ -30,8 +30,8 @@ void fifopre_add(char *nome, char *senha, int cpf, char cargo){
 
 void fifopre_imprimir(Fifopre_node *aux){
     if (aux != NULL){
-        printf("%s - Cargo: %c\n", aux->admin.nome, aux->admin.cargo);
-        printf("--------------------------------------------\n");
+        printf(BACKGROUND_WHITE FONT_BLACK " %s - Cargo: %c \n" RESET, aux->admin.nome, aux->admin.cargo);
+        printf(BOLD FONT_GREEN "-----------------------------\n" RESET);
         fifopre_imprimir(aux->next);}}
 
 

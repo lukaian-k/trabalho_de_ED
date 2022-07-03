@@ -12,7 +12,7 @@ int add_esq_ou_dir = 0;
 //fuctions
 
 void quit(char *text){
-    while (getchar() != 'q'){printf("\n\nPressione: q, para %s: ", text);};}
+    while (getchar() != 'q'){printf(BOLD BACKGROUND_WHITE FONT_RED "\n\nPressione: q, para %s: " RESET, text);};}
 
 
 Fifopre_node *verificar_senha(Fifopre_node *aux, char cargo){

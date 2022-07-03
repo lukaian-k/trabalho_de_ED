@@ -33,7 +33,7 @@ void add_abb(Abb_node *new, Abb_node *aux, int id){
 
 Abb_node *remover_abb(Abb_node *root, int id, Abb_node *backup){
     if (root == NULL){
-        printf("Valor nao encontrado!\n"); return NULL;}
+        printf(BOLD BACKGROUND_WHITE FONT_RED "Valor nao encontrado!\n" RESET); return NULL;}
 
     else { //procura o nó a remover
         if (root->id == id){ //remove nós, caso nao tenha filhos
@@ -69,16 +69,16 @@ void in_ordem(Abb_node *aux){
     if (aux != NULL){
         if (aux->left != NULL){in_ordem(aux->left);}
 
-        printf("===ENCOMENDA=== ID: ");
-        printf("%d\n", aux->id);
-        printf("%s\n", aux->nome_aluno);
-        printf("%d\n", aux->matricula);
-        printf("%s\n", aux->descricao);
-        printf("===============\n\n");
+        printf(BOLD BACKGROUND_BLUE "<<<ENCOMENDA>>> ID:");
+        printf(FONT_GREEN " %d \n" RESET, aux->id);
+        printf(BACKGROUND_WHITE FONT_BLACK " Nome do aluno: %s \n", aux->nome_aluno);
+        printf(" Matricula do aluno: %d \n", aux->matricula);
+        printf(" Descrição do livro: %s \n" RESET, aux->descricao);
+        printf(BOLD BACKGROUND_BLUE"-----------------------\n" RESET);
         
         if (aux->right != NULL){in_ordem(aux->right);}}
     
-    else {printf("\nNão foi encontrada nenhuma encomenda pendente.\n\n");}}
+    else {printf(BOLD BACKGROUND_WHITE FONT_RED "\n Não foi encontrada nenhuma encomenda pendente. \n" RESET);}}
 
 
 void node_imprimir(int id, int espaco) { //funcao aux da: abb_exibir_estrutura
@@ -87,8 +87,9 @@ void node_imprimir(int id, int espaco) { //funcao aux da: abb_exibir_estrutura
 //exibe a estrutura da abb de forma grafica
 void abb_exibir_estrutura(Abb_node *node, int espaco) {
     if (node == NULL) {
+        printf(FONT_RED);
         node_imprimir(-1, espaco); return;}
 
     abb_exibir_estrutura(node->right, espaco+1);
-    node_imprimir(node->id, espaco);
+    printf(FONT_GREEN); node_imprimir(node->id, espaco);
     abb_exibir_estrutura(node->left, espaco+1);}
