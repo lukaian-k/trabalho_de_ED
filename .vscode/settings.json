@@ -4,6 +4,7 @@
         "stdio.h": "c",
         "stdlib.h": "c",
         "fila_prioridade.h": "c",
-        "abb.h": "c"
+        "abb.h": "c",
+        "ncurses.h": "c"
     }
 }

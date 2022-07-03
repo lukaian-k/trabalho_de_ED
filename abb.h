@@ -31,7 +31,7 @@ void add_abb(Abb_node *new, Abb_node *aux, int id){
             else {aux->right = new;}}}
 
 
-Abb_node *remover_abb(Abb_node *root, int id){
+Abb_node *remover_abb(Abb_node *root, int id, Abb_node *backup){
     if (root == NULL){
         printf("Valor nao encontrado!\n"); return NULL;}
 
@@ -50,7 +50,7 @@ Abb_node *remover_abb(Abb_node *root, int id){
                     root->id = aux->id;
                     aux->id = id;
 
-                    root->left = remover_abb(root->left, id);
+                    root->left = remover_abb(root->left, id, backup);
                     return root;}
 
                 else { //com 1 filho
@@ -61,8 +61,8 @@ Abb_node *remover_abb(Abb_node *root, int id){
                     free(root); return aux;}}}
 
         else {
-            if (id < root->id){root->left = remover_abb(root->left, id);}
-            else {root->right = remover_abb(root->right, id);} return root;}}}
+            if (id < root->id){root->left = remover_abb(root->left, id, backup);}
+            else {root->right = remover_abb(root->right, id, backup);} return root;}}}
 
 
 void in_ordem(Abb_node *aux){
@@ -78,7 +78,7 @@ void in_ordem(Abb_node *aux){
         
         if (aux->right != NULL){in_ordem(aux->right);}}
     
-    else {printf("Não foi encontrada nenhuma encomenda pendente.\n\n");}}
+    else {printf("\nNão foi encontrada nenhuma encomenda pendente.\n\n");}}
 
 
 void node_imprimir(int id, int espaco) { //funcao aux da: abb_exibir_estrutura

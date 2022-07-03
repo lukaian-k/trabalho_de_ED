@@ -49,11 +49,10 @@ void add_fila(int id, int prioridade, char *nome_aluno, int matricula, char *des
             fifop_tam++;}}
 
 
-void imprimir(){
-    Fifop_node *aux = fifop_start;
-    for (int i=0; i<fifop_tam; i++){
+void imprimir(Fifop_node *aux){
+    if (aux != NULL){
         printf("Identificador: %d\n", aux->pedido->id);
-            aux = aux->next;}}
+        imprimir(aux->next);}}
 
 
 Pedido remover_fila(){

@@ -28,11 +28,11 @@ void fifopre_add(char *nome, char *senha, int cpf, char cargo){
             fifopre_last = novo; fifopre_tam++;}}
 
 
-void fifopre_imprimir(){
-    Fifopre_node *aux = fifopre_start;
-    for (int i=0; i<fifopre_tam; i++){
-        printf("Nome dos cadastrados: %s - Cargo: %c\n", aux->admin.nome, aux->admin.cargo);
-            aux = aux->next;}}
+void fifopre_imprimir(Fifopre_node *aux){
+    if (aux != NULL){
+        printf("%s - Cargo: %c\n", aux->admin.nome, aux->admin.cargo);
+        printf("--------------------------------------------\n");
+        fifopre_imprimir(aux->next);}}
 
 
 void add_pre_cadastrados(){

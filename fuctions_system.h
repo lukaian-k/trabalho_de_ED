@@ -11,6 +11,10 @@ int add_esq_ou_dir = 0;
 
 //fuctions
 
+void quit(){
+    while (getchar() != 'q'){printf("\n\nPressione: q, para sair: ");};}
+
+
 Fifopre_node *verificar_senha(Fifopre_node *aux, char cargo){
     int cpf; char senha[100];
 
@@ -93,13 +97,12 @@ void remover_encomenda(){
 
     if (admin != NULL){
         //create variables
-        int selecionar_id; Abb_node *lixo = buscar(selecionar_id, root);
+        int selecionar_id; Abb_node *backup = malloc(sizeof(Abb_node));
         
         printf(" Digite o id da encomenda que deseja remover:\n"); scanf("%d", &selecionar_id);
 
-        if (lixo != NULL){
-            root = remover_abb(root, selecionar_id);
-
+        root = remover_abb(root, selecionar_id, backup);
+        if (backup != NULL){
             //setar novos dados (faltando)
             printf("Digite o nome do campus do aluno:\n");
             char *nome_campus_aluno = malloc(sizeof(char)); scanf(" %[^\n]s", nome_campus_aluno);
@@ -110,7 +113,7 @@ void remover_encomenda(){
             printf("Informe a prioridade do pedido (0 à 100):\n");
             int prioriadade; scanf("%d", &prioriadade);
             
-            add_fila(lixo->id, prioriadade, lixo->nome_aluno, lixo->matricula, lixo->descricao, admin->admin.nome, nome_campus_aluno, nome_campus_livro);}}
+            add_fila(backup->id, prioriadade, backup->nome_aluno, backup->matricula, backup->descricao, admin->admin.nome, nome_campus_aluno, nome_campus_livro);}}
     
     else {
         printf("\nSenha incorreta!\n\n");}}
