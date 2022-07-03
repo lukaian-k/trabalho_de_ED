@@ -37,6 +37,11 @@ Abb_node *remover_abb(Abb_node *root, int id, Abb_node *backup){
 
     else { //procura o nó a remover
         if (root->id == id){ //remove nós, caso nao tenha filhos
+            backup->id = id;
+            backup->nome_aluno = root->nome_aluno;
+            backup->matricula = root->matricula;
+            backup->descricao = root->descricao;
+
             if (root->left == NULL && root->right == NULL){
                 free(root); return NULL;}
 
@@ -61,6 +66,7 @@ Abb_node *remover_abb(Abb_node *root, int id, Abb_node *backup){
                     free(root); return aux;}}}
 
         else {
+            backup->id = -1;
             if (id < root->id){root->left = remover_abb(root->left, id, backup);}
             else {root->right = remover_abb(root->right, id, backup);} return root;}}}
 

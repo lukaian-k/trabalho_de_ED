@@ -102,13 +102,13 @@ void remover_encomenda(){
         printf(RESET BOLD BACKGROUND_GREEN FONT_WHITE "\n<<<Exibindo pedidos>>>\n" RESET); in_ordem(root);
 
         //create variables
-        int selecionar_id; Abb_node *backup = malloc(sizeof(Abb_node)); //backup = NULL;
+        int selecionar_id; Abb_node *backup = malloc(sizeof(Abb_node));
         printf(RESET BOLD BACKGROUND_BLUE FONT_WHITE "\n<<<Remover encomenda>>>\n" RESET);
         
         printf(BACKGROUND_WHITE FONT_BLUE " Digite o id da encomenda que deseja remover: "); scanf("%d", &selecionar_id);
 
         root = remover_abb(root, selecionar_id, backup);
-        if (backup != NULL){
+        if (backup->id == selecionar_id){
             //setar novos dados (faltando)
             printf(BACKGROUND_WHITE FONT_BLACK " Digite o nome do campus do aluno: ");
             char *nome_campus_aluno = malloc(sizeof(char)); scanf(" %[^\n]s", nome_campus_aluno);
@@ -127,6 +127,10 @@ void remover_encomenda(){
 
 void remover_pedido(){
     //verificar o usuario
-    if (verificar_senha(fifopre_start, 'T') != NULL){
+    Fifopre_node *admin = verificar_senha(fifopre_start, 'T');
+
+    if (admin != NULL){
+        printf(RESET BOLD BACKGROUND_BLUE FONT_WHITE "\n<<<Remover encomenda>>>\n" RESET);
         //remover da fila de prioridade
-        remover_fila();}}
+        Pedido *backup = remover_fila();
+        printf(BOLD BACKGROUND_WHITE FONT_GREEN "O pedido de ID: %d foi removido!", backup->id);}}

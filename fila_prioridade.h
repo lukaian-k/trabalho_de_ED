@@ -29,18 +29,18 @@ void add_fila(int id, int prioridade, char *nome_aluno, int matricula, char *des
             fifop_start = novo; fifop_last = novo; fifop_tam++;}
 
         //adiciona de acordo com a prioridade! :D
-        else if(fifop_start->pedido->prioridade < prioridade){
+        else if(fifop_start->pedido->prioridade <= prioridade){
             novo->next = fifop_start;
             fifop_start = novo; fifop_tam++;}
         
         else {
-            if (fifop_last->pedido->prioridade > prioridade){
+            if (fifop_last->pedido->prioridade >= prioridade){
                 fifop_last->next = novo;
                 fifop_last = novo;}
 
             else {
                 Fifop_node *aux = fifop_start;
-                while (aux->next->pedido->prioridade < prioridade){
+                while (aux->next->pedido->prioridade <= prioridade){
                     aux = aux->next;}
                 
                 novo->next = aux->next;
@@ -63,15 +63,15 @@ void imprimir(Fifop_node *aux){
         imprimir(aux->next);}}
 
 
-Pedido remover_fila(){
-    Pedido pedido;
+Pedido *remover_fila(){
+    Pedido *backup;
         //remover!
         if (fifop_start != NULL){ //remover do antigo inicio da lista!
             Fifop_node *lixo = fifop_start;
             fifop_start = fifop_start->next;
-            pedido.id = lixo->pedido->id;
+            backup = lixo->pedido;
             //...
             free(lixo); fifop_tam--;
             
             if(fifop_tam == 1){
-                fifop_last = NULL;}} return pedido;}
+                fifop_last = NULL;} return backup;}}
