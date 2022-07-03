@@ -130,7 +130,18 @@ void remover_pedido(){
     Fifopre_node *admin = verificar_senha(fifopre_start, 'T');
 
     if (admin != NULL){
-        printf(RESET BOLD BACKGROUND_BLUE FONT_WHITE "\n<<<Remover encomenda>>>\n" RESET);
         //remover da fila de prioridade
         Pedido *backup = remover_fila();
-        printf(BOLD BACKGROUND_WHITE FONT_GREEN "O pedido de ID: %d foi removido!", backup->id);}}
+        
+        if (backup != NULL){
+            printf(RESET BOLD BACKGROUND_BLUE FONT_WHITE "\n<<<Pedido removido>>>\n" RESET);
+            printf(BOLD BACKGROUND_WHITE FONT_GREEN " Identificador: %d \n", backup->id);
+            printf(FONT_BLUE " Nome do responsavel: %s \n", backup->nome_responsavel);
+            printf(FONT_BLACK " Nome do aluno: %s \n", backup->nome_aluno);
+            printf(" Matricula do aluno: %d \n", backup->matricula);
+            printf(" Nome do campus do aluno: %s \n", backup->nome_campus_aluno);
+            printf(" Descrição do livro: %s \n", backup->descricao);
+            printf(" Campus onde o livro se encontra: %s \n", backup->nome_campus_livro);
+            printf(FONT_RED " Prioridade do pedido: %d \n" RESET, backup->prioridade);}
+        
+        else {printf(BOLD FONT_RED "\nNenhum pedido para ser removido.\n" RESET);}}}

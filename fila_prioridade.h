@@ -65,13 +65,15 @@ void imprimir(Fifop_node *aux){
 
 Pedido *remover_fila(){
     Pedido *backup;
-        //remover!
-        if (fifop_start != NULL){ //remover do antigo inicio da lista!
-            Fifop_node *lixo = fifop_start;
-            fifop_start = fifop_start->next;
-            backup = lixo->pedido;
-            //...
-            free(lixo); fifop_tam--;
+    //remover!
+    if (fifop_start != NULL){ //remover do antigo inicio da lista!
+        Fifop_node *lixo = fifop_start;
+        fifop_start = fifop_start->next;
+        backup = lixo->pedido;
+        //...
+        free(lixo); fifop_tam--;
             
-            if(fifop_tam == 1){
-                fifop_last = NULL;} return backup;}}
+        if(fifop_tam == 1){
+            fifop_last = NULL;}}
+            
+    else {backup = NULL;} return backup;}
