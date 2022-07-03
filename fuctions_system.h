@@ -11,8 +11,8 @@ int add_esq_ou_dir = 0;
 
 //fuctions
 
-void quit(){
-    while (getchar() != 'q'){printf("\n\nPressione: q, para sair: ");};}
+void quit(char *text){
+    while (getchar() != 'q'){printf("\n\nPressione: q, para %s: ", text);};}
 
 
 Fifopre_node *verificar_senha(Fifopre_node *aux, char cargo){
