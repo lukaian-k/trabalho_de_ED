@@ -74,7 +74,7 @@ void in_ordem(Abb_node *aux){
         printf(BACKGROUND_WHITE FONT_BLACK " Nome do aluno: %s \n", aux->nome_aluno);
         printf(" Matricula do aluno: %d \n", aux->matricula);
         printf(" Descrição do livro: %s \n" RESET, aux->descricao);
-        printf(BOLD BACKGROUND_BLUE"-----------------------\n" RESET);
+        printf(BOLD FONT_BLUE "-----------------------\n" RESET);
         
         if (aux->right != NULL){in_ordem(aux->right);}}
     

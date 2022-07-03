@@ -21,8 +21,7 @@ int main(){
     int resp;
     
     while (1){
-        system(clear);
-        printf(BOLD BACKGROUND_BLUE "\n<<< SISTEMA DE ENCOMENDA DE LIVRO >>>\n-------------------------------------\n");
+        system(clear); printf(RESET BOLD BACKGROUND_BLUE "\n<<< SISTEMA DE ENCOMENDA DE LIVRO >>>\n-------------------------------------\n");
         printf(RESET BACKGROUND_WHITE FONT_BLUE " 1 - Encomendar um livro.            \n" //sem pedir senha
                " 2 - Remover uma encomenda de livro. \n" //secretario - pedir senha
                " 3 - Remover um pedido de livro.     \n" //transportadores - pedir senha
@@ -30,7 +29,7 @@ int main(){
                " 5 - Exibir pedidos.                 \n"
                " 6 - Exibir usuarios cadastrados.    \n"
                " 0 - Sair do sistema!                \n"
-               RESET FONT_BLUE "\nDigite a funcionalidade desejada: " RESET); scanf("%d", &resp);
+               RESET FONT_BLUE "\nDigite a funcionalidade desejada: "); scanf("%d", &resp);
 
         switch (resp){
             case 1: //encomendar um livro
