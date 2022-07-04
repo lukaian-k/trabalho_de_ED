@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul  3 11:03:16 2022
+# Make data base, printed on Sun Jul  3 22:23:50 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ NO_AT_BRIDGE = 1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-34593c4a-3714-4c53-a2f2-923c055441bd.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d988337b-eec9-4bb0-b6cd-eded1ea43790.sock
 # environment
 VSCODE_CWD = /home/lukaian
 # environment
@@ -101,7 +101,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2552
+VSCODE_PID = 64043
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -132,7 +132,6 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 SHLVL = 0
 # environment
 MAKELEVEL := 0
- 
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
@@ -194,7 +193,7 @@ which_declare = declare -f
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2552
+GIO_LAUNCHED_DESKTOP_FILE_PID = 64043
 # environment
 _ = /usr/bin/make
 # environment
@@ -222,7 +221,6 @@ SUFFIXES :=
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # environment
- 
 XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = gnome
@@ -237,6 +235,7 @@ GDMSESSION = gnome
 
 # . (device 35, inode 2172841): 12 files, no impossibilities.
 
+ 
 # 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
@@ -293,6 +292,6 @@ GNUmakefile:
 # strcache performance: lookups = 23 / hit rate = 13%
 # hash-table stats:
 # Load=20/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Sun Jul  3 11:03:16 2022
+# Finished Make data base on Sun Jul  3 22:23:50 2022
 
  

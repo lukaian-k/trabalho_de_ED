@@ -47,7 +47,7 @@ int main(){
             case 5:
                 system(clear);
                 if (fifop_start != NULL){imprimir(fifop_start);}
-                else {printf(BOLD BACKGROUND_WHITE FONT_RED "\nNão existe nenhum pedido cadastrado no momento.\n\n" RESET);}
+                else {printf(BOLD BACKGROUND_WHITE FONT_RED "\nNão existe nenhum pedido cadastrado no momento.\n" RESET);}
                 quit("voltar"); break;
 
             case 6:
@@ -58,7 +58,7 @@ int main(){
             case 1815: //OPCAO ESPECIAL (Ada Lovelace - reference)
                 system(clear); printf(BOLD BACKGROUND_WHITE FONT_BLUE "\n\n<<< Exibir estrutura da ABB (Graficamente) >>>\n----------------------------------------------\n\n" RESET);
                 abb_exibir_estrutura(root, 1);
-                printf(BOLD BACKGROUND_WHITE FONT_BLUE "\n==============================================\n\n\n" RESET); 
+                printf(BOLD BACKGROUND_WHITE FONT_BLUE "\n==============================================\n" RESET); 
                 quit("voltar"); break;
 
             case 0:

@@ -12,8 +12,12 @@ Fifop_node *fifop_start = NULL; Fifop_node *fifop_last = NULL; int fifop_tam = 0
 
 void add_fila(int id, int prioridade, char *nome_aluno, int matricula, char *descricao, char *nome_responsavel, char *nome_campus_aluno, char *nome_campus_livro){
         Pedido *pedido = malloc(sizeof(Pedido));
+
+        if (prioridade > 100){pedido->prioridade = 100;}
+        else if (prioridade < 0){pedido->prioridade = 0;}
+        else {pedido->prioridade = prioridade;}
+        
         pedido->id = id;
-        pedido->prioridade = prioridade;
         pedido->nome_aluno = nome_aluno;
         pedido->matricula = matricula;
         pedido->descricao = descricao;

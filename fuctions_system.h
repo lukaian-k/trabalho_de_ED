@@ -31,7 +31,7 @@ Fifopre_node *verificar_senha(Fifopre_node *aux, char cargo){
             else {printf(BOLD FONT_RED "\nSenha incorreta!\n\n" RESET); return NULL;}}
         aux = aux->next;}
 
-    printf(BOLD FONT_RED "\nNão há nenhum usuario cadastrado com esse CPF que possa usar essa função.\n\n" RESET); return 0;}
+    printf(BOLD FONT_RED "\nNão há nenhum usuario cadastrado com esse CPF que possa usar essa função.\n" RESET); return 0;}
 
 
 int gerador_id(){
