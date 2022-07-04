@@ -135,7 +135,7 @@ void remover_pedido(){
         
         if (backup != NULL){
             printf(RESET BOLD BACKGROUND_BLUE FONT_WHITE "\n<<<Pedido removido>>>\n" RESET);
-            printf(BOLD BACKGROUND_WHITE FONT_GREEN " Identificador: %d \n", backup->id);
+            printf(BACKGROUND_WHITE FONT_GREEN " Identificador: %d \n", backup->id);
             printf(FONT_BLUE " Nome do responsavel: %s \n", backup->nome_responsavel);
             printf(FONT_BLACK " Nome do aluno: %s \n", backup->nome_aluno);
             printf(" Matricula do aluno: %d \n", backup->matricula);

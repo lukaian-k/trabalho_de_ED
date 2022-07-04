@@ -51,8 +51,8 @@ void add_fila(int id, int prioridade, char *nome_aluno, int matricula, char *des
 
 void imprimir(Fifop_node *aux){
     if (aux != NULL){
-        printf(BOLD BACKGROUND_WHITE FONT_GREEN " Identificador: %d \n", aux->pedido->id);
-        printf(FONT_BLUE " Nome do responsavel: %s \n", aux->pedido->nome_responsavel);
+        printf(BACKGROUND_GREEN FONT_WHITE " Identificador: %d \n", aux->pedido->id);
+        printf(BACKGROUND_WHITE FONT_BLUE " Nome do responsavel: %s \n", aux->pedido->nome_responsavel);
         printf(FONT_BLACK " Nome do aluno: %s \n", aux->pedido->nome_aluno);
         printf(" Matricula do aluno: %d \n", aux->pedido->matricula);
         printf(" Nome do campus do aluno: %s \n", aux->pedido->nome_campus_aluno);
@@ -75,5 +75,5 @@ Pedido *remover_fila(){
             
         if(fifop_tam == 1){
             fifop_last = NULL;}}
-            
+
     else {backup = NULL;} return backup;}
