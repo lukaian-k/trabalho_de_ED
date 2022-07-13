@@ -22,8 +22,7 @@ void fifopre_add(char *nome, char *senha, int cpf, char cargo){
         if (fifopre_start == NULL){ //fila vazia
             fifopre_start = novo; fifopre_last = novo; fifopre_tam++;}
 
-        else { //adiciona de acordo com a prioridade! :D
-            //modificar!
+        else {
             fifopre_last->next = novo;
             fifopre_last = novo; fifopre_tam++;}}
 

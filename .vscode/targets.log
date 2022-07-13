@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul  3 22:23:50 2022
+# Make data base, printed on Mon Jul  4 15:14:45 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ NO_AT_BRIDGE = 1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d988337b-eec9-4bb0-b6cd-eded1ea43790.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b8a74307-375a-4376-9e0d-3bf757bddd49.sock
 # environment
 VSCODE_CWD = /home/lukaian
 # environment
@@ -63,7 +63,7 @@ VSCODE_CODE_CACHE_PATH = /home/lukaian/.config/Code/CachedData/30d9c6cd9483b2cc5
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.GWN5O1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.AWCYO1
 # default
 .LOADED := 
 # default
@@ -101,13 +101,13 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 64043
+VSCODE_PID = 4145
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1689,unix/unix:/tmp/.ICE-unix/1689
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/1728,unix/unix:/tmp/.ICE-unix/1728
 # automatic
 *F = $(notdir $*)
 # environment
@@ -145,7 +145,7 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = 1ed3ac3bb3eb4716a5a6486b20da4962
+INVOCATION_ID = 617a395c66ce4212b2b7d71ec1dee27e
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -175,7 +175,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 1741
+SYSTEMD_EXEC_PID = 1770
 # environment
 HISTCONTROL = ignoredups
 # environment
@@ -187,23 +187,24 @@ USER = lukaian
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1574
+MANAGERPID = 1575
 # environment
 which_declare = declare -f
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 64043
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4145
 # environment
 _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-JOURNAL_STREAM = 8:27635
+JOURNAL_STREAM = 8:30124
 # environment
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+ 
 # environment
 HOME = /home/lukaian
 # environment
@@ -235,7 +236,6 @@ GDMSESSION = gnome
 
 # . (device 35, inode 2172841): 12 files, no impossibilities.
 
- 
 # 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
@@ -292,6 +292,6 @@ GNUmakefile:
 # strcache performance: lookups = 23 / hit rate = 13%
 # hash-table stats:
 # Load=20/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Sun Jul  3 22:23:50 2022
+# Finished Make data base on Mon Jul  4 15:14:45 2022
 
  

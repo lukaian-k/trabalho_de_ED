@@ -36,7 +36,7 @@ void add_fila(int id, int prioridade, char *nome_aluno, int matricula, char *des
         else if(fifop_start->pedido->prioridade <= prioridade){
             novo->next = fifop_start;
             fifop_start = novo; fifop_tam++;}
-        
+
         else {
             if (fifop_last->pedido->prioridade >= prioridade){
                 fifop_last->next = novo;
