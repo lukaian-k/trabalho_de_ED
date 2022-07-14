@@ -12,7 +12,7 @@
 
 <h3 align="center"><strong>Sobre o desenvolvimento</strong></h3>
 
-#### *O projeto foi feito __100%__ em __C__ e utilizou as __Estruturas de Dados:__ Árvore Binária de Busca, Fila/Fila de Prioridade*
+#### *O projeto foi feito __100%__ em __C__ e utilizou as __Estruturas de Dados:__ Árvore Binária de Busca, Fila de Prioridade*
 
 #### ***I - Encomendar um Livro***
 <sup>*__Dados:__ ID, Matrícula do Aluno, Nome do Aluno e Descricao do Livro.*</sup>
